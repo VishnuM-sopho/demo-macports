@@ -6,12 +6,12 @@ from port.models import Port
 import json
 # Create your views here.
 def name1(request,port_name):
-	data= Port.objects.get(portname=port_name)
+	data= Port.objects.filter(portname=port_name).last()
 	return render(request,'port/port.html',{"port":data})
 
 
 def parser(request):
-	data1=json.loads(open('port/testing.json').read())
+	data1=json.loads(open('port/testing2.json').read())
 	count=0
 	for b in data1:
 		
