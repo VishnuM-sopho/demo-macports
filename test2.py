@@ -14,7 +14,7 @@ for b in data1:
 	p1n=b['name']
 	d1e=b['description']
 	if 'variants' in b:
-		v1a=b['variants']
+		v1a=b['variants']  
 	p1d=b['portdir']
 
 	c.execute("INSERT INTO port_port (portname,description,variant,portdir) VALUES (?,?,?,?)",(p1n,d1e,v1a,p1d))
